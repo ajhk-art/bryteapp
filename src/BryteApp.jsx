@@ -1,12 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button } from "./components/ui/button";
-import { Card, CardContent } from "./components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs";
-import { Textarea } from "./components/ui/textarea";
-import { Input } from "./components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./components/ui/select";
-import { toast } from "sonner";
 
-// resten av appen (samme som før) ...
-
-// ...resten av appen er lik
+export default function BryteApp() {
+  const [count, setCount] = useState(0);
+  return (
+    <div style={{ padding: 20 }}>
+      <h1>BryteApp</h1>
+      <p>Du har trykket {count} ganger</p>
+      <Button onClick={() => setCount(count + 1)}>Trykk meg</Button>
+    </div>
+  );
+}
